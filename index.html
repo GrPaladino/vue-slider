@@ -13,10 +13,7 @@
       <div class="container">
         <div class="slider-wrapper" @mouseover="stopAutoplay()" @mouseleave="setAutoplay()" tabindex="0">
           <div class="item">
-            <img
-              :src="slides[activeImage].image"
-              alt="Spiderman"
-            />
+            <img :src="slides[activeImage].image" alt="Spiderman" />
             <div class="text">
               <h3>{{ slides[activeImage].title }}</h3>
               <p>{{slides[activeImage].text}}</p>
@@ -27,8 +24,7 @@
             <div class="prev" @click="prevClick()"></div>
             <div class="next" @click="nextClick()"></div>
             <div v-for="(slide, index) in slides" :class="index == activeImage ? 'active' : ''" class="thumb">
-              <img :src="slide.image" 
-              @click="goToImage(index)" alt="Marvels" />
+              <img :src="slide.image" @click="goToImage(index)" alt="Marvels" />
             </div>
             
             </div>
