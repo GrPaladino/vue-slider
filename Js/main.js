@@ -155,5 +155,9 @@ createApp({
         this.activeImage--;
       }
     },
+
+    goToImage(index) {
+      this.activeImage = index;
+    },
   },
 }).mount("#app");

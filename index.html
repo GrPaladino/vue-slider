@@ -28,7 +28,7 @@
             <div class="prev" @click="prevClick()"></div>
             <div class="next" @click="nextClick()"></div>
             <div v-for="(slide, index) in slides" :class="slideClass" class="thumb">
-              <img :src="slide.image" alt="Marvels" />
+              <img :src="slide.image" @click="goToImage(index)" alt="Marvels" />
             </div>
             
             </div>
