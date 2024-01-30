@@ -3,6 +3,8 @@ const { createApp } = Vue;
 createApp({
   data() {
     return {
+      slideCounter: 0,
+      slideClass: "active",
       slides: [
         {
           image: "img/01.webp",
@@ -139,4 +141,4 @@ createApp({
       return cell;
     },
   },
-}).mount("#root");
+}).mount("#app");
