@@ -11,7 +11,12 @@
   <body>
     <div id="app">
       <div class="container">
-        <div class="slider-wrapper" @mouseover="stopAutoplay()" @mouseleave="setAutoplay()" tabindex="0">
+        <div
+          class="slider-wrapper"
+          @mouseover="stopAutoplay()"
+          @mouseleave="setAutoplay()"
+          tabindex="0"
+        >
           <div class="item">
             <img :src="slides[activeImage].image" alt="Spiderman" />
             <div class="text">
@@ -23,10 +28,12 @@
           <div class="thumbs">
             <div class="prev" @click="prevClick()"></div>
             <div class="next" @click="nextClick()"></div>
-            <div v-for="(slide, index) in slides" :class="index == activeImage ? 'active' : ''" class="thumb">
+            <div
+              v-for="(slide, index) in slides"
+              :class="index == activeImage ? 'active' : ''"
+              class="thumb"
+            >
               <img :src="slide.image" @click="goToImage(index)" alt="Marvels" />
-            </div>
-            
             </div>
           </div>
         </div>
@@ -34,6 +41,6 @@
     </div>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <script src="./js/main.js"></script>
+    <script src="./Js/main.js"></script>
   </body>
 </html>
