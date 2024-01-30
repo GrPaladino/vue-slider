@@ -4,7 +4,6 @@ createApp({
   data() {
     return {
       activeImage: 0,
-      slideClass: "active",
       autoPlay: false,
 
       slides: [
