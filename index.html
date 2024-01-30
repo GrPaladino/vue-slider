@@ -15,7 +15,6 @@
           <div class="item">
             <img
               :src="slides[activeImage].image"
-              
               alt="Spiderman"
             />
             <div class="text">
@@ -27,8 +26,9 @@
           <div class="thumbs">
             <div class="prev" @click="prevClick()"></div>
             <div class="next" @click="nextClick()"></div>
-            <div v-for="(slide, index) in slides" :class="slideClass" class="thumb">
-              <img :src="slide.image" @click="goToImage(index)" alt="Marvels" />
+            <div v-for="(slide, index) in slides" :class="index == activeImage ? 'active' : ''" class="thumb">
+              <img :src="slide.image" 
+              @click="goToImage(index)" alt="Marvels" />
             </div>
             
             </div>
